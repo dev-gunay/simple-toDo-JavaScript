@@ -1,4 +1,6 @@
 <img width="682" height="513" alt="todoapp" src="https://github.com/user-attachments/assets/ef68cdf4-25a6-4696-b191-ef8dcf869d0c" />
+
+
 # Simple To‑Do App (HTML, CSS, JavaScript)
 
 A small, clean to‑do list app built with **vanilla JavaScript**, **HTML**, and **CSS**.  
