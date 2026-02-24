@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Einfache To‑Do App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="todo-card">
+        <header class="todo-header">
+          <h1 class="todo-title">Meine To‑Do Liste</h1>
+          <p class="todo-subtitle">
+            Schreibe deine Aufgaben auf, hake sie ab und lösche sie, wenn du fertig bist.
+          </p>
+        </header>
+
+        <section class="todo-input-area">
+          <label class="sr-only" for="todo-input">Neue Aufgabe</label>
+          <input
+            id="todo-input"
+            class="todo-input"
+            type="text"
+            placeholder="Was möchtest du erledigen?"
+          />
+          <button id="todo-add-button" class="todo-add-button">Hinzufügen</button>
+        </section>
+
+        <section class="todo-list-area">
+          <ul id="todo-list" class="todo-list">
+            <!-- Aufgaben werden hier per JavaScript eingefügt -->
+          </ul>
+          <p id="todo-empty-state" class="todo-empty-state">
+            Noch keine Aufgaben. Schreibe oben etwas und klicke auf „Hinzufügen“.
+          </p>
+        </section>
+
+        <footer class="todo-footer">
+          <span id="todo-count" class="todo-count">0 Aufgaben insgesamt</span>
+          <button id="todo-clear-done" class="todo-clear-done">
+            Erledigte löschen
+          </button>
+        </footer>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
+
