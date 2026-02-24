@@ -1,12 +1,6 @@
 // Simple to-do app in plain JavaScript.
 // Focus: readable code and a clear data flow.
 
-// -------------------------
-// State (data in memory)
-// -------------------------
-
-// All tasks currently in the app.
-// Each item looks like: { text: string, done: boolean }
 let todos = [];
 
 // -------------------------
@@ -68,9 +62,6 @@ function saveTodosToStorage() {
   localStorage.setItem(STORAGE_KEY, raw);
 }
 
-// -------------------------
-// Rendering (update the UI)
-// -------------------------
 
 // Update the footer text: "X tasks, Y open".
 function renderTodoCount() {
