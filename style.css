@@ -232,10 +232,6 @@ body {
   transform: translateY(0);
 }
 
-/* =========
-   Accessibility / Hilfsstyles
-   ========= */
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -248,9 +244,7 @@ body {
   border: 0;
 }
 
-/* =========
-   Responsive
-   ========= */
+/* Responsive */
 
 @media (max-width: 480px) {
   .todo-card {
