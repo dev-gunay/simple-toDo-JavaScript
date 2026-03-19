@@ -1,11 +1,6 @@
-// Simple to-do app in plain JavaScript.
-// Focus: readable code and a clear data flow.
-
 let todos = [];
 
-// -------------------------
-// DOM elements (HTML nodes)
-// -------------------------
+// DOM Elements
 
 const inputElement = document.getElementById("todo-input");
 const addButtonElement = document.getElementById("todo-add-button");
@@ -25,15 +20,12 @@ if (
   alert("A required HTML element was not found. Please check the IDs.");
 }
 
-// Storage key used in localStorage for this app.
+
 const STORAGE_KEY = "simple-todo-items-js";
 
-// -------------------------
-// Persistence (localStorage)
-// -------------------------
 
 // Load tasks from localStorage into the todos array.
-// Called once on page load.
+
 function loadTodosFromStorage() {
   const raw = localStorage.getItem(STORAGE_KEY);
 
@@ -63,7 +55,7 @@ function saveTodosToStorage() {
 }
 
 
-// Update the footer text: "X tasks, Y open".
+// Update the footer text
 function renderTodoCount() {
   const total = todos.length;
   let open = 0;
@@ -83,7 +75,6 @@ function renderTodoCount() {
   }
 }
 
-// Create a single <li> element for one todo item.
 // index = position of the todo in the todos array.
 function createTodoListItem(todo, index) {
   const li = document.createElement("li");
@@ -122,7 +113,7 @@ function createTodoListItem(todo, index) {
   return li;
 }
 
-// Render the full list of todos into the <ul>.
+
 function renderTodoList() {
   if (!listElement || !emptyStateElement) {
     return;
@@ -145,9 +136,6 @@ function renderTodoList() {
   renderTodoCount();
 }
 
-// -------------------------
-// Mutations (change data)
-// -------------------------
 
 // Add a new todo if the input text is not empty.
 function addTodo(text) {
@@ -209,9 +197,6 @@ function clearDoneTodos() {
   renderTodoList();
 }
 
-// -------------------------
-// Event helpers
-// -------------------------
 
 // Read the current input value and add it as a new todo.
 function handleAddTodoFromInput() {
@@ -226,10 +211,7 @@ function handleAddTodoFromInput() {
   inputElement.focus();
 }
 
-// -------------------------
-// Event listeners
-// -------------------------
-
+// Event listener
 if (addButtonElement) {
   addButtonElement.addEventListener("click", function () {
     handleAddTodoFromInput();
@@ -250,10 +232,6 @@ if (clearDoneButtonElement) {
     clearDoneTodos();
   });
 }
-
-// -------------------------
-// Initial startup
-// -------------------------
 
 loadTodosFromStorage();
 renderTodoList();
